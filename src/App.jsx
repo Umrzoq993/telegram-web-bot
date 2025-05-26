@@ -44,10 +44,6 @@ const App = () => {
           : c
       );
     }
-    // if cartItems is empty, hide the main button
-    if (cartItems.length === 1) {
-      telegram.MainButton.hide();
-    }
   };
 
   const onCheckout = () => {
