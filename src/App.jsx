@@ -56,13 +56,16 @@ const App = () => {
     const queryID = telegram.initDataUnsafe.query.id;
 
     if (queryID) {
-      fetch("http://localhost:8000/web-data", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(cartItems),
-      });
+      fetch(
+        "https://ummitelegramwebapibot-2289fcb747f4.herokuapp.com/web-data",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(cartItems),
+        }
+      );
     } else {
       telegram.sendData(
         JSON.stringify({
